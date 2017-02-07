@@ -23,7 +23,7 @@ The following contains the structure of the Dataset, which we used for the whole
 
 We use (a) to denote that a record is connected to another table.
 
-
+--------------
 ##### CAMPAIGN_TABLE
 (1584 households mailed 30 Campaigns)
 
@@ -36,6 +36,8 @@ HOUSEHOLD_KEY -- Uniquely identifies each household
 
 DESCRIPTION -- Type of campaign(TypeA, TypeB or TypeC )
 ```
+
+--------------
 ##### CAMPAIGN_DESC
 This table gives the length of time for which a campaign runs. So, any coupons received as part of a campaign are valid within the dates contained in this table.
 (30 Campaigns)
@@ -50,6 +52,8 @@ START_DAY -- Start Date of Campaign
 
 END_DAY -- End Date of Campaign
 ```
+
+--------------
 #####  COUPON_REDEMPT
 (434 households redeemed 556 coupons from 30 Campaigns)
 
@@ -69,6 +73,7 @@ CAMPAIGN -- Uniquely identifies each campaign
 
 ```
 
+--------------
 #####  COUPON
 (1135 coupons promoted 44133 products for the 30 campaigns)
 
@@ -143,6 +148,8 @@ TRANS_TIME -- Time of day when transaction occurred
 
 WEEK_NO -- Week of transaction. Ranges 1 -102
 ```
+
+--------------
 ##### PRODUCT.csv
 (92353 products)
 
@@ -165,6 +172,9 @@ BRAND -- Indicates Private or National label brand
 
 CURR_SIZE_OF_PRODUCT -- Indicates package size
 ```
+
+--------------
+
 ##### CASUAL_DATA
 (68377 products)
 
