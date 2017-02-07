@@ -26,6 +26,7 @@ We use (a) to denote that a record is connected to another table.
 
 ##### CAMPAIGN_TABLE
 (1584 households mailed 30 Campaigns)
+
 This table lists the campaigns received by each household in the study. Each household received a different set of campaigns.
 File: campaign_table.csv
 ```
@@ -113,7 +114,8 @@ KID_CATEGORY_DESC -- Number of children present up to 3+
 ___________________________________________
 ##### TRANSACTION_DATA.csv
 (2500 Households shopped 92339 products)
-This table contains all products purcahsed by household within this study. Each line found in this table is essentially the same line that would be found on a store receipt.
+
+This table contains all products purchased by household within this study. Each line found in this table is essentially the same line that would be found on a store receipt.
 
 *File: transaction_data2.csv*
 ```
