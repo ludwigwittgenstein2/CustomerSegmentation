@@ -1,13 +1,11 @@
 # Supermarket
-We build a Django prototype in Python to improve revenues with Supermarket data.
+We build a Django prototype in Python to improve revenues for Supermarket data.
 
-Supermarket:
+Supermarket: Our Dataset has information about product details, purchases, demographics, coupons. Using this, our goal is to improve revenues by targeting Segments in the Dataset.
 
-We have dataset from Supermarket, And our goal is to improve Revenues by targeting Segments.
+We use dunnhumby's data for a Supermarket.
 
-For this project, we use dunnhumby's data for a Supermarket.
 ___________________________________________________________
-
 
 About Data-Set:
 
