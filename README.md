@@ -9,8 +9,6 @@ ___________________________________________________________
 
 #### Data Set:
 
-
-##### About: 
 This dataset contains household level transactions over two years from a group of 2,500 households who are frequent shoppers at a retailer. It contains all of each household’s purchases, not just those from a limited number of categories. For certain households, demographic information as well as direct marketing contact history are included.
 
 Below is the link for whole data-Set:
@@ -66,18 +64,27 @@ COUPON_UPC
 PRODUCT_ID
 ```
 ##### HH_DEMOGRAPHIC
+This table contains demographic information for a portion of household.
+
 (801 household)
 
 *File: hh_demographic.csv*
 ```
-HOUSEHOLD_KEY
-AGE_DESC
-MARITAL_STATUS_CODE
-INCOME_DESC
-HOMEOWNER_DESC
-HH_COMP_DESC
-HOUSEHOLD_SIZE_DESC
-KID_CATEGORY_DESC
+HOUSEHOLD_KEY -- Uniquely Identifies each household
+
+AGE_DESC -- Estimated age range
+
+MARITAL_STATUS_CODE -- Marital Status (A - Married, B- Single, U-Unknown)
+
+INCOME_DESC -- Household income
+
+HOMEOWNER_DESC -- Homeowner, renter
+
+HH_COMP_DESC -- Household composition
+
+HOUSEHOLD_SIZE_DESC -- Size of household up to 5+
+
+KID_CATEGORY_DESC -- Number of children present up to 3+
 ```
 ##### TRANSACTION_DATA.csv
 (2500 Households shopped 92339 products)
