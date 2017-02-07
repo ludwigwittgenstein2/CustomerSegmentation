@@ -1,23 +1,28 @@
 # Supermarket
-A Prototype to improve Revenues with Supermarket data
+We build a Django prototype in Python to improve revenues with Supermarket data.
 
 Supermarket:
 We have a data for Supermarket, And our goal is to improve Revenues by targeting Segments.
 
 For this project, we use dunnhumby's data for a Supermarket.
-==================================================================================================
+___________________________________________________________
 
 
-About Data:
+About Data-Set:
 
 --------------------------------------------------------------------------------------------------
 
 This dataset contains household level transactions over two years from a group of 2,500 households who are frequent shoppers at a retailer. It contains all of each household’s purchases, not just those from a limited number of categories. For certain households, demographic information as well as direct marketing contact history are included.
 
-Link for whole CSV:
-https://www.dropbox.com/sh/6lz05ehkt31x81j/AADxV_STvuCwDujql3VwarGja?dl=0
+Link for whole Data-Set:
+CSV FILES:
+
+* [CSV-Files] (https://www.dropbox.com/sh/6lz05ehkt31x81j/AADxV_STvuCwDujql3VwarGja?dl=0)
+YAML Files:
+* [YAML-FILES](https://www.dropbox.com/sh/lz522q4z2119vh2/AACtNhemZOf4EtCojHccSHBBa?dl=0)
 
 ## DATA TABLES:
+The following contains the structure of the Dataset, which is used for the whole prototype.
 
 (a) Record connected to another table
 
