@@ -23,12 +23,15 @@ Below is the link for whole data-Set:
 The following contains the structure of the Dataset, which is used for the whole prototype.
 
 (a) Record connected to another table
-```
+
 *CAMPAIGN_TABLE* (1584 households mailed 30 Campaigns)
+
+```
+
 HOUSEHOLD_KEY
 (a)CAMPAIGN_TABLE
 DESCRIPTION
-```
+
 CAMPAIGN_DESC (30 Campaigns)
 (a) CAMPAIGN
 DESCRIPTION
@@ -89,6 +92,7 @@ STORE_ID
 WEEK_NO
 DISPLAY
 MAILER
+```
 --------------
 Code:
 
