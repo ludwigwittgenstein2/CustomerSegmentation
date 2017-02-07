@@ -37,6 +37,7 @@ HOUSEHOLD_KEY
 ```
 ##### CAMPAIGN_DESC
 (30 Campaigns)
+
 *File: campaign_desc.csv*
 ```
 (a)CAMPAIGN
@@ -46,6 +47,7 @@ END_DAY
 ```
 #####  COUPON_REDEMPT
 (434 households redeemed 556 coupons from 30 Campaigns)
+
 *File: coupon_redempt.csv*
 ```
 HOUSEHOLD_KEY
@@ -56,6 +58,7 @@ CAMPAIGN
 
 #####  COUPON
 (1135 coupons promoted 44133 products for the 30 campaigns)
+
 *File: coupon_redempt.csv*
 ```
 CAMPAIGN
@@ -64,6 +67,7 @@ PRODUCT_ID
 ```
 ##### HH_DEMOGRAPHIC
 (801 household)
+
 *File: hh_demographic.csv*
 ```
 HOUSEHOLD_KEY
@@ -77,6 +81,7 @@ KID_CATEGORY_DESC
 ```
 ##### TRANSACTION_DATA.csv
 (2500 Households shopped 92339 products)
+
 *File: transaction_data2.csv*
 ```
 HOUSEHOLD_KEY
@@ -94,6 +99,7 @@ WEEK_NO
 ```
 ##### PRODUCT.csv
 (92353 products)
+
 *File:product.csv*
 
 ```
@@ -107,6 +113,7 @@ CURR_SIZE_OF_PRODUCT
 ```
 ##### CASUAL_DATA
 (68377 products)
+
 *File:causal_data.csv*
 ```
 PRODUCT_ID
