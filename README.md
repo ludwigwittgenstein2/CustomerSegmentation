@@ -196,7 +196,9 @@ MAILER -- Mailer Location
 ## Code:
 
 ```
-firstQuestion.py --
+firstQuestion.py
+
+--
 readCSV()- reads transaction_data2.csv
 and dumps total sales value of each household, And 4 quarters sales of each household
 
