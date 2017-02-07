@@ -365,3 +365,9 @@ Build Loyal Customer Dictionary:
 Output: customerLoyalAverage.yaml
 
 """
+
+## Release Notes
+#### `v1.0.0`
+
+## Contributors
+*[Rick Sam](https://github.com/ludwigwittgenstein2)
