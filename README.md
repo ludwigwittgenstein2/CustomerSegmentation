@@ -70,7 +70,7 @@ This table contains demographic information for a portion of household.
 
 *File: hh_demographic.csv*
 ```
-HOUSEHOLD_KEY -- Uniquely Identifies each household
+HOUSEHOLD_KEY                              -- Uniquely Identifies each household
 
 AGE_DESC -- Estimated age range
 
