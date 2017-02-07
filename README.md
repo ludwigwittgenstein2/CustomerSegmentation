@@ -193,11 +193,12 @@ DISPLAY -- Display location
 MAILER -- Mailer Location
 ```
 --------------
-Scripts:
+## Code:
 
 ```
 firstQuestion.py --
-readCSV()- reads transaction_data2.csv and dumps total sales value of each household, And 4 quarters sales of each household
+readCSV()- reads transaction_data2.csv
+and dumps total sales value of each household, And 4 quarters sales of each household
 
 buildCompleteTopCustomer() -
 a) Creates Top Household List by sales value
