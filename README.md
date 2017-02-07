@@ -370,4 +370,4 @@ Output: customerLoyalAverage.yaml
 #### `v1.0.0`
 
 ## Contributors
-*[Rick Sam](https://github.com/ludwigwittgenstein2)
+[Rick](https://github.com/ludwigwittgenstein2)
