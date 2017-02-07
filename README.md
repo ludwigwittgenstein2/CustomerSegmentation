@@ -2,7 +2,8 @@
 We build a Django prototype in Python to improve revenues with Supermarket data.
 
 Supermarket:
-We have a data for Supermarket, And our goal is to improve Revenues by targeting Segments.
+
+We have dataset from Supermarket, And our goal is to improve Revenues by targeting Segments.
 
 For this project, we use dunnhumby's data for a Supermarket.
 ___________________________________________________________
@@ -24,9 +25,10 @@ The following contains the structure of the Dataset, which we used for the whole
 
 We use (a) to denote a record connected to another table
 
-*CAMPAIGN_TABLE* (1584 households mailed 30 Campaigns)
 
 ```
+
+*CAMPAIGN_TABLE* (1584 households mailed 30 Campaigns)
 
 HOUSEHOLD_KEY
 (a)CAMPAIGN_TABLE
@@ -64,7 +66,7 @@ HH_COMP_DESC
 HOUSEHOLD_SIZE_DESC
 KID_CATEGORY_DESC
 
-## TRANSACTION_DATA.csv 
+## TRANSACTION_DATA.csv
 (2500 Households shopped 92339 products)
 
 HOUSEHOLD_KEY
