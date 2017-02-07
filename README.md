@@ -28,6 +28,7 @@ We use (a) to denote that a record is connected to another table.
 
 ##### CAMPAIGN_TABLE
 (1584 households mailed 30 Campaigns)
+
 File: campaign_table.csv
 ```
 HOUSEHOLD_KEY
