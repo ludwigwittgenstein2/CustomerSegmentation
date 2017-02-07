@@ -1,26 +1,21 @@
-#!/usr/bin/env python
-from django.shortcuts import render
-from graphos.sources.csv_file import CSVDataSource
-from graphos.sources.simple import SimpleDataSource
-from graphos.renderers.morris import BarChart
+#thirdQuestion
+
 import yaml
 import sys
 import csv
 
-# Global Variable for Dictionary and Product
-
-customerQuarterProductDict = {}
+customerQuarterProductDict={}
 productDict = {}
 topCompleteHouseHold = []
-moreSpentOverTime = []
+lessSpentOverTime = []
 
 def readCSV():
     global customerQuarterProductDict
     global productDict
 
-    with open('/Users/Rick/Desktop/projectFinalFolder/segments/moreSpentOverTime.yaml', 'r' ) as f:
-	moreSpentOverTime = yaml.load(f)
-    f.close()
+    with open('/Users/Rick/Desktop/projectFinalFolder/segments/lessSpentOverTime.yaml', 'r') as f:
+        lessSpentOverTime = yaml.load(f)
+        f.close()
 
     with open("/Users/Rick/Desktop/CSV/product.csv", 'r') as f:
         data = csv.reader(f, delimiter=',')
@@ -36,7 +31,7 @@ def readCSV():
         for row in data:
             saleValue = (round(float(row[5])))
 
-            if row[0] in moreSpentOverTime:
+            if row[0] in lessSpentOverTime:
                 if row[0] not in customerQuarterProductDict:
                     customerQuarterProductDict[row[0]] = {}
                     customerQuarterProductDict[row[0]][0] = {}
@@ -77,7 +72,7 @@ def readCSV():
     f.close()
 
 
-    with open("/Users/Rick/Desktop/projectFinalFolder/segments/customerMoreQuarterProductDictOverTime.yaml", 'w') as f:
+    with open("/Users/Rick/Desktop/projectFinalFolder/segments/customerLessQuarterProductDictOverTime.yaml", 'w') as f:
         f.write(yaml.dump(customerQuarterProductDict,default_flow_style=False))
     f.close()
 
@@ -85,55 +80,15 @@ def readCSV():
         f.write(yaml.dump(productDict,default_flow_style=False))
     f.close()
 
-def plotCatergory():
-
-    with open("/Users/Rick/Desktop/projectFinalFolder/segments/customerMoreQuarterProductDictOverTime.yaml", 'r') as f:
-        customerQuarterProductDict =  yaml.load(f)
-    f.close()
-    Quarterly_list = []
-    for houseHoldKey, quarterDict in customerQuarterProductDict.items():
-        Quarterly_list = [['Category', 'Sale_value']]
-        for quarterNo, categoryDict in quarterDict.items():
-            for item, saleValue in categoryDict.items():
-                Quarterly_list.append([str(quarterNo) +"_" + item, saleValue])
-        print houseHoldKey, Quarterly_list
-
-def plot():
-
-    context = {}
-    customerQuarterProductDict = {}
-    moreOverTime = []
-
-    with open("/Users/Rick/Desktop/projectFinalFolder/segments/customerMoreQuarterProductDictOverTime.yaml", 'r') as f:
-        customerQuarterProductDict =  yaml.load(f)
-    f.close()
-
-    with open("/Users/Rick/Desktop/projectFinalFolder/segments/moreSpentOverTime.yaml", 'r') as f:
-        moreOverTime =  yaml.load(f)
-    f.close()
-
-    Quarterly_list = []
-    count = 0
-
-    for houseKey in moreOverTime:
-        for houseHoldKey, quarterDict in customerQuarterProductDict.items():
-                if houseKey == houseHoldKey:
-                    if count  < 10:
-                        Quarterly_list = [['Category', 'Sale_value']]
-                        for quarterNo, categoryDict in quarterDict.items():
-                            for item, saleValue in categoryDict.items():
-                                Quarterly_list.append([str(quarterNo) +"_" + item, saleValue])
-                        print houseHoldKey,Quarterly_list
-                        data = Quarterly_list
-                        data_source = SimpleDataSource(data)
-                        chart = BarChart(data_source, height=500, width=500, options={'title': 'Quarterly_list'})
-                        context['chart'+str(count)] = chart
-                        context['house'+str(count)]= houseHoldKey
-                        count = count+ 1
 
 def main():
-#    readCSV()
-#    plotCatergory()
-    plot()
+    readCSV()
+
+if __name__=="__main__":
+    main()
+
+def main():
+    readCSV()
+
 if __name__=="__main__":
     main()
