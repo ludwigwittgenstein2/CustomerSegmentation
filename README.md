@@ -23,13 +23,12 @@ Below is the link for whole data-Set:
 ## DATA TABLES:
 The following contains the structure of the Dataset, which we used for the whole prototype.
 
-We use (a) to denote a record connected to another table
-
-
+We use (a) to denote that a record is connected to another table.
 
 
 ##### CAMPAIGN_TABLE
 (1584 households mailed 30 Campaigns)
+File: campaign_table.csv
 ```
 HOUSEHOLD_KEY
 (a)CAMPAIGN_TABLE
@@ -37,32 +36,35 @@ HOUSEHOLD_KEY
 ```
 ##### CAMPAIGN_DESC
 (30 Campaigns)
+*File: campaign_desc.csv*
 ```
 (a)CAMPAIGN
 DESCRIPTION
 START_DAY
 END_DAY
 ```
-#####  COUPON_REDEMPT.csv
+#####  COUPON_REDEMPT
 (434 households redeemed 556 coupons from 30 Campaigns)
+*File: coupon_redempt.csv*
 ```
-
 HOUSEHOLD_KEY
 DAY
 COUPON_UPC
 CAMPAIGN
 ```
 
-#####  COUPON.csv
+#####  COUPON
 (1135 coupons promoted 44133 products for the 30 campaigns)
+*File: coupon_redempt.csv*
 ```
 CAMPAIGN
 COUPON_UPC
 PRODUCT_ID
 ```
-##### HH_DEMOGRAPHIC.csv
-```
+##### HH_DEMOGRAPHIC
 (801 household)
+*File: hh_demographic.csv*
+```
 HOUSEHOLD_KEY
 AGE_DESC
 MARITAL_STATUS_CODE
@@ -74,6 +76,7 @@ KID_CATEGORY_DESC
 ```
 ##### TRANSACTION_DATA.csv
 (2500 Households shopped 92339 products)
+*File: transaction_data2.csv*
 ```
 HOUSEHOLD_KEY
 BASKET_ID
@@ -89,8 +92,10 @@ TRANS_TIME
 WEEK_NO
 ```
 ##### PRODUCT.csv
-```
 (92353 products)
+*File:product.csv*
+
+```
 PRODUCT_ID
 COMMODITY_DESC
 SUB_COMMODITY_DESC
@@ -99,8 +104,9 @@ DEPARTMENT
 BRAND
 CURR_SIZE_OF_PRODUCT
 ```
-##### CASUAL_DATA.csv
+##### CASUAL_DATA
 (68377 products)
+*File:causal_data.csv*
 ```
 PRODUCT_ID
 STORE_ID
