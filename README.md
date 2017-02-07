@@ -26,36 +26,39 @@ The following contains the structure of the Dataset, which we used for the whole
 We use (a) to denote a record connected to another table
 
 
+
+
+CAMPAIGN_TABLE (1584 households mailed 30 Campaigns)
 ```
-
-*CAMPAIGN_TABLE* (1584 households mailed 30 Campaigns)
-
 HOUSEHOLD_KEY
 (a)CAMPAIGN_TABLE
    DESCRIPTION
-
+```
 ## CAMPAIGN_DESC (30 Campaigns)
-
+```
 (a)CAMPAIGN
 DESCRIPTION
 START_DAY
 END_DAY
-
+```
 ## COUPON_REDEMPT.csv
+```
 434 households redeemed 556 coupons from 30 Campaigns
 HOUSEHOLD_KEY
 DAY
 COUPON_UPC
 CAMPAIGN
+```
 
 ## COUPON.csv
 (1135 coupons promoted 44133 products for the 30 campaigns)
-
+```
 CAMPAIGN
 COUPON_UPC
 PRODUCT_ID
-
+```
 HH_DEMOGRAPHIC.csv
+```
 (801 household)
 HOUSEHOLD_KEY
 AGE_DESC
@@ -65,10 +68,10 @@ HOMEOWNER_DESC
 HH_COMP_DESC
 HOUSEHOLD_SIZE_DESC
 KID_CATEGORY_DESC
-
+```
 ## TRANSACTION_DATA.csv
 (2500 Households shopped 92339 products)
-
+```
 HOUSEHOLD_KEY
 BASKET_ID
 DAY
@@ -81,9 +84,9 @@ COUPON_DISC
 RETAIL_DISC
 TRANS_TIME
 WEEK_NO
-
+```
 PRODUCT.csv
-
+```
 (92353 products)
 PRODUCT_ID
 COMMODITY_DESC
@@ -92,10 +95,10 @@ MANUFACTURER
 DEPARTMENT
 BRAND
 CURR_SIZE_OF_PRODUCT
-
+```
 CASUAL_DATA.csv
 (68377 products)
-
+```
 PRODUCT_ID
 STORE_ID
 WEEK_NO
