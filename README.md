@@ -223,3 +223,39 @@ Output:
   10: 105.0
   11: 599.0
   12: 0
+
+
+customerEveryQuarterMoreProducts.py --
+
+"""
+Output -- for this code
+Three levels of Dictionary
+12 Quarters.
+
+This script prints out all the values of selected customers in moreOverTime
+
+1)Customer Household_ID:
+2) Quarter:[0,1,2,3,4,5,6,7,8,9,10,11]
+3) Product Details
+    a) Brand
+    b) commodity
+    c) Revenue
+    d) Sub-commodity
+
+Output File: customerEveryQuarterMoreProducts.yaml"
+"""
+
+customerLoyal.py --
+
+"""
+Build Loyal Customer Dictionary:
+    What is Loyal Customer?
+    A Customer who has bought continuously in supermarket.
+    Where is this data?
+    It is in Transaction data.
+    How do you find if the customer is Loyal?
+    If He purchases Every Week in Year, he is Loyal
+    And he has a purchase average of above 50
+Output: customerLoyalAverage.yaml
+
+"""
