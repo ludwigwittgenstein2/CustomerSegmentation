@@ -63,6 +63,7 @@ CAMPAIGN
 COUPON_UPC
 PRODUCT_ID
 ```
+___________________________________________
 ##### HH_DEMOGRAPHIC
 This table contains demographic information for a portion of household.
 
@@ -70,7 +71,7 @@ This table contains demographic information for a portion of household.
 
 *File: hh_demographic.csv*
 ```
-HOUSEHOLD_KEY                              -- Uniquely Identifies each household
+HOUSEHOLD_KEY -- Uniquely Identifies each household
 
 AGE_DESC -- Estimated age range
 
@@ -86,6 +87,7 @@ HOUSEHOLD_SIZE_DESC -- Size of household up to 5+
 
 KID_CATEGORY_DESC -- Number of children present up to 3+
 ```
+___________________________________________
 ##### TRANSACTION_DATA.csv
 (2500 Households shopped 92339 products)
 
