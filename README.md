@@ -195,11 +195,12 @@ MAILER -- Mailer Location
 --------------
 ## Code:
 
-```
+
 firstQuestion.py -- readCSV(), buildCompleteTopCustomer(), selectCustomerOverTrend().
 
 How many Customers are spending more over time, less over time?
 
+```
 --
 readCSV()- reads transaction_data2.csv
 and dumps total sales value of each household, And 4 quarters sales of each household
@@ -285,13 +286,23 @@ productIDCatergoryDict.yaml
 
 
 ```
+
+
+```
 thirdApproach.py --
+
+Of those Customers, which ones are spending less over Time with which categories are less engaged?
+
 Input -- transaction_data2.csv
 Output -- customerSaleDict, customerQuarterSalesDict,
 buildTopList() --
 output -- topCompleteHouseHoldList.yaml
 selectIncreasedTrendCustomer() -- print increased purchase trend
 selectDecreasedTrendCustomer() -- prints decreased purchase trend
+
+
+```
+
 
 fourthQuestion.py --
 
