@@ -524,35 +524,151 @@ U:
 
 ```
 ---------------------------------------------------------------
-fourthQuestionAgeGroup.py --
-List of people from moreSpentOverTime divided into Age/Income
-Output: customerAgeMoreOverTime.yaml
+File: fourthQuestionAgeGroup.py --
+Functions: readCSV()
 
-fourthQuestionMoreIncomeHousehold.py --
+List of people from moreSpentOverTime with Age/Income (income)
+
+```
+Input: moreSpentOverTime.yaml, hh_demographic.csv
+
+
+Output:
+
+customerAgeMoreOverTime.yaml
+
+[19-24:
+  '1481': 35-49K
+  '1923': 35-49K
+  '2064': 50-74K
+  '567': 25-34K
+  '955': Under 15K
+25-34:
+  '1041': 35-49K
+  '1172': 50-74K
+  '1267': 75-99K
+]
+
+```
+
+---------------------------------------------------------------
+
+File: fourthQuestionMoreIncomeHousehold.py --
+Functions: readCSV()
+
+List of People with Household size from moreSpentOverTime
+
+```
 Details of Household size with Income
-Output: customerIncomeMoreOverTime.yaml
 
+Output:
 
-fourthQuestionMaritalHouseholdIncome.py --
-Details of Household by married/unmarried
+customerIncomeMoreOverTime.yaml
+
+[100-124K:
+  '2172': 2 Adults No Kids
+125-149K:
+  '2406': 2 Adults Kids
+15-24K:
+  '2405': Single Female
+150-174K:
+  '2374': 2 Adults No Kids
+175-199K:
+  '2102': 2 Adults No Kids
+200-249K:
+  '976': 2 Adults Kids
+25-34K:
+  '2186': Single Female
+250K+:
+  '1844': 2 Adults No Kids
+35-49K:
+  '2488': Single Female
+50-74K:
+  '2427': 2 Adults Kids
+75-99K:
+  '2483': Single Male
+Under 15K:
+  '1949': Single Female]
+
+```
+
+---------------------------------------------------------------
+
+File: fourthQuestionMaritalHouseholdIncome.py --
+Functions: readCSV()
+
+Details of Household by married/unmarried from moreSpentOverTime
+
+```
+
 Input: moreSpentOverTime.yaml, hh_demographic.csv
+
+
 Output Details: customerStatusMoreOverTime.yaml
-A: 25-34: '1534':75-99K
-U: 35-44: '1244':125K
-
-fourthQuestionFullStatusMarried.py --
-Input: moreSpentOverTime.yaml, hh_demographic.csv
+[
 A:
-    45-54:
-        'Homeowner' :
-                '7' :
-                    'KID' = 0
-                    'Size' = 2
-                    'Income' = 50-74K
+  25-34:
+    '1534': 75-99K
+    '166': 50-74K
+    '1680': 15-24K
+    '1693': 35-49K
+B:
+  19-24:
+    '1923': 35-49K
+  25-34:
+    '1172': 50-74K
+    '1285': 25-34K
+    '1475': 50-74K
+U:
+  19-24:
+    '1481': 35-49K
+    '2064': 50-74K
+    '567': 25-34K
+    '955': Under 15K
+  25-34:
+    '1041': 35-49K    
+]
 
-Output: customerFullStatusMoreOverTime.yaml
+```
+---------------------------------------------------------------
 
-customerAllProductsInEveryQuarter.py --
+File: fourthQuestionFullStatusMarried.py
+Functions: readCSV()
+
+Full details of Household who purchased moreOverTime.
+
+```
+Input: moreSpentOverTime.yaml, hh_demographic.csv
+
+Output:
+
+customerFullStatusMoreOverTime.yaml
+
+A:
+  25-34:
+    '1534': 75-99K
+    '166': 50-74K
+    '1680': 15-24K
+    '1693': 35-49K
+    '1785': 35-49K
+    '2147': 75-99K
+    '2172': 100-124K
+    '2378': 50-74K
+    '2406': 125-149K
+    '283': 50-74K
+    '761': 125-149K
+    '911': 125-149K
+    '971': 35-49K
+    '976': 200-249K
+  35-44:
+
+```
+---------------------------------------------------------------
+
+File: customerAllProductsInEveryQuarter.py
+Functions: Product(), findQuarterSale()
+
+Script creates dictionary of all products of customers who bought in each quarter
 
 Three levels of Dictionary
 
@@ -564,15 +680,33 @@ Three levels of Dictionary
     c) Revenue
     d) Sub-commodity
 
+```
 Input -- moreSpentOverTime, product.csv, transaction_data2.csv
 
-Output: customerAllProductsInEveryQuarter.yaml
+Output:
 
-customerAveragePurchase.py
+customerAllProductsInEveryQuarter.yaml
 
-#Find out the average purchase of Customer
-#Average revenue per customer = Customers Total Purchase/Number of Visits
-"""
+['1':
+  0:
+    '1001908':
+      BRAND: National
+      COMMODITY: CAKES
+      DEPARTMENT: PASTRY
+      REVENUE: 5.0
+      SUB-COMMODITY: 'CAKES: CREME/PUDDING'
+    '1004906':]
+```
+
+---------------------------------------------------------------
+
+File: customerAveragePurchase.py
+Functions: readCSV(), AverageCSV()
+
+######Find out the average purchase of Customer
+######Average revenue per customer = Customers Total Purchase/Number of Visits
+
+```
 Output:
     CustomerAverageDictionaryPerson.yaml: household_id:'Average Purchase'
     CustomerSaleDictionary.yaml: household_id:'Total Sales'
@@ -613,16 +747,20 @@ Output:
   10: 105.0
   11: 599.0
   12: 0
+```
+---------------------------------------------------------------
 
+File: customerEveryQuarterMoreProducts.py
 
-customerEveryQuarterMoreProducts.py --
+Functions: product()
 
-"""
+This script prints out all the values of selected customers in moreOverTime
+
+```
 Output -- for this code
 Three levels of Dictionary
 12 Quarters.
 
-This script prints out all the values of selected customers in moreOverTime
 
 1)Customer Household_ID:
 2) Quarter:[0,1,2,3,4,5,6,7,8,9,10,11]
@@ -632,12 +770,28 @@ This script prints out all the values of selected customers in moreOverTime
     c) Revenue
     d) Sub-commodity
 
-Output File: customerEveryQuarterMoreProducts.yaml"
-"""
+Output File:
 
-customerLoyal.py --
+customerEveryQuarterMoreProducts.yaml
 
-"""
+['1':
+  0: {}
+  1: {}
+  2:
+    '1006546':
+      BRAND: National
+      COMMODITY: DRY MIX DESSERTS
+      DEPARTMENT: GROCERY
+      QUANTITY: 1.0
+      REVENUE: 1.0
+      SUB-COMMODITY: PUDDINGS DRY]
+```
+---------------------------------------------------------------
+File: customerLoyal.py
+Functions: readCSV(), loyalCustomers()
+We find out list of customers who are loyal to the store
+
+```
 Build Loyal Customer Dictionary:
     What is Loyal Customer?
     A Customer who has bought continuously in supermarket.
@@ -646,9 +800,94 @@ Build Loyal Customer Dictionary:
     How do you find if the customer is Loyal?
     If He purchases Every Week in Year, he is Loyal
     And he has a purchase average of above 50
-Output: customerLoyalAverage.yaml
 
-"""
+Output:
+
+customerTimesVisit.yaml
+
+['1': 29
+'100': 8
+'1008': 9
+'1010': 17
+'1011': 34
+'1020': 32
+'1023': 30
+'1025': 18
+'1041': 26
+'1050': 25
+'1057': 36
+'1061': 20
+'1073': 21
+'1074': 25
+]
+
+
+
+customerLoyalAverage.yaml
+
+[
+- - 'Loyal Customer:'
+  - Household_id:1142
+  - Visits:42
+  - Average Purchase:128.40
+- - 'Loyal Customer:'
+  - Household_id:1788
+  - Visits:27
+  - Average Purchase:110.96
+- - 'Non-Loyal Customer:'
+]
+
+```
+File: price_sensitive_0.1.py
+Functions: coupon(), findConsumer(), couponDetails(), productDetails()
+
+Objective: To find Price Sensitive consumers
+
+How: i) Find out coupon redeemed by top 20 consumers
+    ii) Find out Product Details by top 20 Consumers
+
+
+Code:
+```
+Function--coupon(): (What it does?)
+  i) Read Coupon redemp csv files
+  ii) Divides Days into Quarters
+  ii) Creates a dictionary with
+ Output:couponRedemptDict[housholdkey][quarter] = (Campaign, COUPON_UPC)
+
+findConsumer()
+ Objective: Find the people in top20 who redeemed
+
+What's happening inside?
+    i) Opening moreSpentOverTime
+    ii) Opening coupon_redem.csv
+    iii) In Both, we find the people who have redeemed
+    iv) Storing it in Consumer_coupon_redemp.yaml
+
+Output:
+
+
+productDetails_couponsRedeemed.yaml
+'10000085361':
+- '105358'
+- '1504'
+- GROCERY
+- National
+- FRZN VEGETABLE/VEG DSH
+- FRZN BAGGED VEGETABLES - PLAIN
+- 32 OZ
+'10000085363':
+- '5592689'
+- '5423'
+- MEAT-PCKGD
+- National
+- LUNCHMEAT
+- POULTRY
+- 6 OZ
+
+
+```
+---------------------------------------------------------------
 
 ## Release Notes
 #### `v1.0.0`
