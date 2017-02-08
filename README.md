@@ -414,23 +414,116 @@ Prints decreased purchase trend
 
 
 ```
+---------------------------------------------------------------
 
+###### fourthQuestion.py --
 
-fourthQuestion.py --
+Which demographic factors (e.g. household size, presence of children, income) appear to affect customer spend?
 
-Input -- lessSpentOverTime, hh_demographic.csv
-Output --customerDemographicsLessOverTime
 This contains demographic details of consumers who purchased less over time
 
-fourthQuestionMore.py --
+###### Functions: readCSV()
+
+```
+Input -- The Script reads lessSpentOverTime.yaml, hh_demographic.csv
+
+Output --
+customerDemographicsLessOverTime.yaml
+['123':
+- 45-54
+- B
+- 35-49K
+- '2'
+- None/Unknown
+'17':
+- 65+
+- B
+- Under 15K
+- '2'
+- None/Unknown
+'1803':
+- 19-24
+- A
+- 50-74K
+- '3'
+- '1']
+
+
+```
+---------------------------------------------------------------
+
+
+###### File: fourthQuestionMore.py
+
+Which demographic factors (e.g. household size, presence of children, income) appear to affect customer spend?
+
+This contains demographic details of consumers who purchased more over time
+
+###### Functions: readCSV()
+
+```
 Input -- moreSpentOverTime.yaml, hh_demographic
-Output -- customerDemographicsMoreOverTime.yaml
+
+Output --
+
 Demographics of household which purchased more over time
 
-fourthQuestionMarriedUnMarried.py --
-List of people from moreSpentOverTime with demographic details (income)
-Output -- customerMaritalStatusMoreOverTime.yaml
+customerDemographicsMoreOverTime.yaml
+['1':
+- 65+
+- A
+- 35-49K
+- '2'
+- None/Unknown
+'1020':
+- 45-54
+- A
+- 25-34K
+- '2'
+- None/Unknown
+'1041':
+- 25-34
+- U
+- 35-49K]
+```
+--------------------------------------------------------------
 
+###### File: fourthQuestionMarriedUnMarried.py --
+This Script has output of people who are married, unmarried
+
+###### Functions: readCSV()
+
+List of people from moreSpentOverTime with demographic details (income)
+```
+Input: moreSpentOverTime.yaml, hh_demographic.csv
+
+Output --
+
+customerMaritalStatusMoreOverTime.yaml
+
+[
+A:
+  '1': 35-49K
+  '1020': 25-34K
+  '1074': 35-49K
+  '113': 125-149K
+  '1142': 50-74K
+B:
+  '1131': 50-74K
+  '1137': 35-49K
+  '1172': 50-74K
+  '1285': 25-34K
+U:
+  '1041': 35-49K
+  '1057': 50-74K
+  '1082': 35-49K
+  '1151': Under 15K
+  '119': 125-149K
+  '1228': 100-124K
+]
+
+```
+---------------------------------------------------------------
 fourthQuestionAgeGroup.py --
 List of people from moreSpentOverTime divided into Age/Income
 Output: customerAgeMoreOverTime.yaml
