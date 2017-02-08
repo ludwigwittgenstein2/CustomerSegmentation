@@ -526,9 +526,9 @@ U:
 
 ```
 ---------------------------------------------------------------
-File: fourthQuestionAgeGroup.py
+###### File: fourthQuestionAgeGroup.py
 
-Functions: readCSV()
+###### Functions: readCSV()
 
 List of people from moreSpentOverTime with Age/Income (income)
 
@@ -556,9 +556,9 @@ customerAgeMoreOverTime.yaml
 
 ---------------------------------------------------------------
 
-File: fourthQuestionMoreIncomeHousehold.py
+###### File: fourthQuestionMoreIncomeHousehold.py
 
-Functions: readCSV()
+###### Functions: readCSV()
 
 List of People with Household size from moreSpentOverTime
 
@@ -598,9 +598,9 @@ Under 15K:
 
 ---------------------------------------------------------------
 
-File: fourthQuestionMaritalHouseholdIncome.py
+###### File: fourthQuestionMaritalHouseholdIncome.py
 
-Functions: readCSV()
+###### Functions: readCSV()
 
 Details of Household by married/unmarried from moreSpentOverTime
 
@@ -637,8 +637,9 @@ U:
 ```
 ---------------------------------------------------------------
 
-File: fourthQuestionFullStatusMarried.py
-Functions: readCSV()
+###### File: fourthQuestionFullStatusMarried.py
+
+###### Functions: readCSV()
 
 Full details of Household who purchased moreOverTime.
 
@@ -670,9 +671,9 @@ A:
 ```
 ---------------------------------------------------------------
 
-File: customerAllProductsInEveryQuarter.py
+###### File: customerAllProductsInEveryQuarter.py
 
-Functions: Product(), findQuarterSale()
+###### Functions: Product(), findQuarterSale()
 
 Script creates dictionary of all products of customers who bought in each quarter
 
@@ -706,9 +707,9 @@ customerAllProductsInEveryQuarter.yaml
 
 ---------------------------------------------------------------
 
-File: customerAveragePurchase.py
+###### File: customerAveragePurchase.py
 
-Functions: readCSV(), AverageCSV()
+###### Functions: readCSV(), AverageCSV()
 
 ######Find out the average purchase of Customer
 ######Average revenue per customer = Customers Total Purchase/Number of Visits
@@ -757,9 +758,9 @@ Output:
 ```
 ---------------------------------------------------------------
 
-File: customerEveryQuarterMoreProducts.py
+###### File: customerEveryQuarterMoreProducts.py
 
-Functions: product()
+###### Functions: product()
 
 This script prints out all the values of selected customers in moreOverTime
 
@@ -794,9 +795,9 @@ customerEveryQuarterMoreProducts.yaml
       SUB-COMMODITY: PUDDINGS DRY]
 ```
 ---------------------------------------------------------------
-File: customerLoyal.py
+###### File: customerLoyal.py
 
-Functions: readCSV(), loyalCustomers()
+###### Functions: readCSV(), loyalCustomers()
 
 We find out list of customers who are loyal to the store
 
@@ -850,11 +851,11 @@ customerLoyalAverage.yaml
 
 ---------------------------------------------------------------
 
-File: price_sensitive_0.1.py
+###### File: price_sensitive_0.1.py
 
-Functions: coupon(), findConsumer(), couponDetails(), productDetails()
+###### Functions: coupon(), findConsumer(), couponDetails(), productDetails()
 
-Objective: To find Price Sensitive consumers
+###### Objective: To find Price Sensitive consumers
 
 i) Find out coupon redeemed by top 20 consumers
 ii) Find out product Details by top 20 Consumers
