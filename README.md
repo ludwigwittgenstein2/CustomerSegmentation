@@ -196,32 +196,95 @@ MAILER -- Mailer Location
 ## Code:
 
 ```
-firstQuestion.py
+firstQuestion.py -- readCSV(), buildCompleteTopCustomer(), selectCustomerOverTrend().
+
+How many Customers are spending more over time, less over time?
 
 --
 readCSV()- reads transaction_data2.csv
 and dumps total sales value of each household, And 4 quarters sales of each household
+Output: customerSaleDict.yaml ['1':4430.0
+  '10':233.0
+  '100':2310.0]
+Output: customerQuarterSaleDict.yaml
+['1':
+0:780.0
+1:1103.0
+2:1211.0
+3:1336.0]
+
 
 buildCompleteTopCustomer() -
 a) Creates Top Household List by sales value
+Output: topCompleteHouseHoldList.yaml
+[-'1023'
+ -'1609'
+ -'2322']
 
 selectCustomerOverTrend() -
-a) Creates moreSpentOverTime, And lessSpentOverTime
+Reads customerQuarterSaleDict and topCompleteHouseHoldList to find out users who purchased more over time and less over time
 
+moreSpentOverTime.yaml
+- [-'1023'
+  -'1453'
+  -'1653'
+  -'328']
+lessSpentOverTime.yaml
+-[-'1803'
+  -'2448'
+  -'2185']
 ```
+```
+secondQuestion.py -- readCSV(), plotCatergory(), plot()
 
-secondQuestion.py --
-readCSV() - Dumps customerMoreQuarterProductDictOverTime,
-which has customer's from moreSpentOverTime and product information with 4 quarters. It also dumps productIDCatergoryDict which has categories of products
+Of Customers who are spending more over time, which categories are growing at a faster rate?
+
+
+readCSV() - Reads moreSpentOverTime.yaml,  product.csv and transaction_data2.csv
+
+
+Output:
+customerMoreQuarterProductDictOverTime.yaml
+['1':
+  0:
+    '':0.0
+    DELI: 53:0
+    DRUG GM: 102.0
+    GROCERY: 497.0
+    MEAT: 14.0
+    MEAT-PCKGD:47.0
+    PASTRY: 35.0
+    PRODUCE: 28.0
+    SALAD BAR:4.0
+   1:
+   '':0
+   DELI:60.0]
+
+
+productIDCatergoryDict.yaml -
+
+'1000002':DELI
+'1000029':DRUG GM
+'1000050':GROCERY
+'1000057':GROCERY
+'1000059':GROCERY
+
 
 plotCatergory() -- Plot for Django
 plot() -- Plot for Django
 
+
+```
+
+```
 thirdQuestion.py --
 Input -- lessSpentOverTime, product.csv, transaction_data2.csv
 Output -- customerLessQuarterProductDictOverTime.yaml,
 productIDCatergoryDict.yaml
 
+
+
+```
 thirdApproach.py --
 Input -- transaction_data2.csv
 Output -- customerSaleDict, customerQuarterSalesDict,

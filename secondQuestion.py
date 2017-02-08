@@ -1,4 +1,7 @@
 #!/usr/bin/env python
+
+#Which categories are growing at faster rate? 
+
 from django.shortcuts import render
 from graphos.sources.csv_file import CSVDataSource
 from graphos.sources.simple import SimpleDataSource
