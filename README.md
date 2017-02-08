@@ -278,9 +278,11 @@ plot() -- Plot for Django
 
 
 ```
+---------------------------------------------------------------
 
+thirdQuestion.py
 
-thirdQuestion.py -- Functions - readCSV()
+Functions - readCSV()
 
 Of those customers who are spending less over time, with which categories are they becoming less engaged?
 
@@ -326,7 +328,9 @@ productIDCatergoryDict.yaml -
 --------------------------------------------------------------
 
 
-thirdApproach.py -- Functions: readCSV(), buildTopList(), selectIncreasedTrendCustomer(), selectDecreasedTrendCustomer()
+File: thirdApproach.py
+
+Functions: readCSV(), buildTopList(), selectIncreasedTrendCustomer(), selectDecreasedTrendCustomer()
 
 ```
 Of those Customers, which ones are spending less over Time with which categories are less engaged?
@@ -394,8 +398,8 @@ Prints increased purchase trend
 113 [['week_no', 'sales_value'], [0, 2230.0], [1, 4290.0], [2, 4298.0], [3, 4660.0]]
 1142 [['week_no', 'sales_value'], [0, 2472.0], [1, 3430.0], [2, 4443.0], [3, 5001.0]]  
 ]
-
-selectDecreasedTrendCustomer() --
+---------------------------------------------------------------
+selectDecreasedTrendCustomer()
 
 Prints decreased purchase trend
 
@@ -411,8 +415,6 @@ Prints decreased purchase trend
 1828 [['week_no', 'sales_value'], [0, 3359.0], [1, 2047.0], [2, 306.0], [3, 129.0]]
 81 [['week_no', 'sales_value'], [0, 2429.0], [1, 2075.0], [2, 750.0], [3, 337.0]]
 ]
-
-
 ```
 ---------------------------------------------------------------
 
@@ -524,7 +526,8 @@ U:
 
 ```
 ---------------------------------------------------------------
-File: fourthQuestionAgeGroup.py --
+File: fourthQuestionAgeGroup.py
+
 Functions: readCSV()
 
 List of people from moreSpentOverTime with Age/Income (income)
@@ -553,7 +556,8 @@ customerAgeMoreOverTime.yaml
 
 ---------------------------------------------------------------
 
-File: fourthQuestionMoreIncomeHousehold.py --
+File: fourthQuestionMoreIncomeHousehold.py
+
 Functions: readCSV()
 
 List of People with Household size from moreSpentOverTime
@@ -594,7 +598,8 @@ Under 15K:
 
 ---------------------------------------------------------------
 
-File: fourthQuestionMaritalHouseholdIncome.py --
+File: fourthQuestionMaritalHouseholdIncome.py
+
 Functions: readCSV()
 
 Details of Household by married/unmarried from moreSpentOverTime
@@ -666,6 +671,7 @@ A:
 ---------------------------------------------------------------
 
 File: customerAllProductsInEveryQuarter.py
+
 Functions: Product(), findQuarterSale()
 
 Script creates dictionary of all products of customers who bought in each quarter
@@ -701,6 +707,7 @@ customerAllProductsInEveryQuarter.yaml
 ---------------------------------------------------------------
 
 File: customerAveragePurchase.py
+
 Functions: readCSV(), AverageCSV()
 
 ######Find out the average purchase of Customer
@@ -788,7 +795,9 @@ customerEveryQuarterMoreProducts.yaml
 ```
 ---------------------------------------------------------------
 File: customerLoyal.py
+
 Functions: readCSV(), loyalCustomers()
+
 We find out list of customers who are loyal to the store
 
 ```
@@ -838,25 +847,59 @@ customerLoyalAverage.yaml
 ]
 
 ```
+
+---------------------------------------------------------------
+
 File: price_sensitive_0.1.py
+
 Functions: coupon(), findConsumer(), couponDetails(), productDetails()
 
 Objective: To find Price Sensitive consumers
 
-How: i) Find out coupon redeemed by top 20 consumers
-    ii) Find out Product Details by top 20 Consumers
-
+i) Find out coupon redeemed by top 20 consumers
+ii) Find out product Details by top 20 Consumers
 
 Code:
 ```
-Function--coupon(): (What it does?)
-  i) Read Coupon redemp csv files
+
+coupon():
+
+(What it does?)
+  i) Reads Coupon redemp csv files
   ii) Divides Days into Quarters
   ii) Creates a dictionary with
- Output:couponRedemptDict[housholdkey][quarter] = (Campaign, COUPON_UPC)
+
+ Output:
+
+ couponDictionary.yaml
+
+  couponRedemptDict[housholdkey][quarter] = (Campaign, COUPON_UPC)
+
+[
+'1':
+  11: !!python/tuple
+  - '18'
+  - '54200029176'
+'1000':
+  11: !!python/tuple
+  - '13'
+  - '53700040075'
+'1005':
+  11: !!python/tuple
+  - '13'
+  - '10000089128'
+'101':
+  11: !!python/tuple
+  - '18'
+  - '54900050076'
+'1011':
+]
+
+---------------------------------------------------------------
 
 findConsumer()
- Objective: Find the people in top20 who redeemed
+
+Objective: Find the people in top20 who redeemed
 
 What's happening inside?
     i) Opening moreSpentOverTime
@@ -866,24 +909,59 @@ What's happening inside?
 
 Output:
 
+Consumer_coupon_redemp.yaml
+
+['1':
+- '10000085364'
+'1011':
+- '10000085427'
+'1020':
+- '50000540082'
+'1074':
+- '10000085425'
+'1098':
+- '51111075533'
+'113':
+- '53500000076'
+'1142':
+- '51111120076']
+---------------------------------------------------------------
+couponDetails()
+
+Output:
+
+couponUPC_ProductID.yaml
+
+['10000085361': '105358'
+'10000085363': '5592689'
+'10000085364': '2281854'
+'10000085369': '1115451'
+'10000085378': '12385916'
+'10000085425': '14077327'
+'10000085426': '1104659'
+'10000085427': '961866']
+---------------------------------------------------------------
+
+productDetails()
+
+Output:
+
 
 productDetails_couponsRedeemed.yaml
-'10000085361':
-- '105358'
-- '1504'
-- GROCERY
-- National
-- FRZN VEGETABLE/VEG DSH
-- FRZN BAGGED VEGETABLES - PLAIN
-- 32 OZ
-'10000085363':
-- '5592689'
-- '5423'
-- MEAT-PCKGD
-- National
-- LUNCHMEAT
-- POULTRY
-- 6 OZ
+
+[
+'1':
+- '10000085364'
+'1011':
+- '10000085427'
+'1020':
+- '50000540082'
+'1074':
+- '10000085425'
+'1098':
+- '51111075533'
+]
+---------------------------------------------------------------
 
 
 ```
