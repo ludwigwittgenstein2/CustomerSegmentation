@@ -74,7 +74,7 @@ def buildTopList():
         topCompleteHouseHoldList.append(houseHoldKey)
     print topCompleteHouseHoldList
 
-    with open('/Users/Rick/Desktop/projectFinalFolder/segments/topCompleteHouseHoldList', 'wb' ) as f:
+    with open('/Users/Rick/Desktop/projectFinalFolder/segments/topCompleteHouseHoldList.yaml', 'wb' ) as f:
         f.write(yaml.dump(topCompleteHouseHoldList,default_flow_style=False))
     f.close()
 
