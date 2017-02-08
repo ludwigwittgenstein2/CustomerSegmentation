@@ -277,24 +277,61 @@ plot() -- Plot for Django
 
 ```
 
-```
-thirdQuestion.py --
-Input -- lessSpentOverTime, product.csv, transaction_data2.csv
-Output -- customerLessQuarterProductDictOverTime.yaml,
-productIDCatergoryDict.yaml
 
+thirdQuestion.py -- Functions - readCSV()
 
-
-```
+Of those customers who are spending less over time, with which categories are they becoming less engaged?
 
 
 ```
-thirdApproach.py --
+Input -- We read lessSpentOverTime.yaml, product.csv and transaction_data2.csv
 
+Output -- We have customerLessQuarterProductDictOverTime.yaml
+['1013':
+0:
+  DELI: 8.0
+  DRUG GM: 74.0
+  GROCERY: 700.0
+  KIOSK-GAS: 10.0
+  MEAT: 142.0
+  MEAT-PCKGD:34.0
+  SALAD BAR: 26.0
+  SEAFOOD: 24:0
+ 1:
+  DRUG GM: 92.0
+  GROCERY: 408.0
+  MEAT: 208.0
+  MEAT-PCKGD: 136.0
+  PRODUCE: 40.0
+  ]
+
+----------------------------------------------
+productIDCatergoryDict.yaml -
+
+['1000002': DELI
+'1000029': DRUG GM
+'1000050': GROCERY
+'1000057': GROCERY
+'1000059': DRUG GM
+'1000092': DRUG GM
+'1000099': GROCERY
+'1000106': GROCERY]
+
+
+
+
+```
+--------------------------------------------------------------
+
+
+thirdApproach.py -- Functions: readCSV(), buildTopList(), selectIncreasedTrendCustomer(), selectDecreasedTrendCustomer()
+
+```
 Of those Customers, which ones are spending less over Time with which categories are less engaged?
 
 Input -- transaction_data2.csv
 Output -- customerSaleDict, customerQuarterSalesDict,
+
 buildTopList() --
 output -- topCompleteHouseHoldList.yaml
 selectIncreasedTrendCustomer() -- print increased purchase trend
