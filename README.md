@@ -196,8 +196,9 @@ MAILER -- Mailer Location
 ## Code:
 
 
-File: firstQuestion.py
-Functions: readCSV(), buildCompleteTopCustomer(), selectCustomerOverTrend().
+######File: firstQuestion.py
+
+###### Functions: readCSV(), buildCompleteTopCustomer(), selectCustomerOverTrend().
 
 How many Customers are spending more over time, less over time?
 
